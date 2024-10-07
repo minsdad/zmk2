@@ -29,7 +29,7 @@
             compatible = "zmk,behavior-macro";
             label = "Shift+Win+3, Enter, Right Arrow";
             tap-ms = <10>;
-            bindings = <&kp LS(LWIN(KC_3)) &wait-ms 200 &kp KC_ENTER &wait-ms 300 &kp KC_RIGHT &wait-ms 4500>;
+            bindings = <&kp LS(LWIN(KC_3)) &wait-ms 300 &kp KC_ENTER &wait-ms 300 &kp KC_RIGHT &wait-ms 4500>;
         };
     };
     combos {
