@@ -24,7 +24,14 @@
             bindings = <&kp>, <&kp>;
         };
     };
-    
+    macros {
+        book_cap: book_cap {
+            compatible = "zmk,behavior-macro";
+            label = "Shift+Win+3, Enter, Right Arrow";
+            tap-ms = <10>;
+            bindings = <&kp LS(LWIN(KC_3)) &wait-ms 200 &kp KC_ENTER &wait-ms 300 &kp KC_RIGHT &wait-ms 4500>;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         combo_esc {
@@ -198,4 +205,8 @@
                         >;
                 };
         };
+};
+
+&kp KC_A {
+    bindings = <&book_cap>;
 };
